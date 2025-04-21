@@ -1,0 +1,249 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* background-color: #1e1e1e; */
+}
+
+html, body {
+  height: 100%; /* Make sure body takes full height */
+  font-family: Arial, sans-serif;
+  background-color: #1e1e1e;
+}
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero {
+  height: 50vh;
+  background-image: url('./background.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+  position: relative;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* dark overlay */
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.plus {
+  color: #e50914; /* Netflix-ish red */
+  font-weight: 500;
+}
+
+.hero-subtitle {
+  font-size: 1.4rem;
+  margin-bottom: 40px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.highlight {
+  color: #e50914;
+}
+
+.hero-button {
+  font-size: 1.2rem;
+  padding: 0.75em 2em;
+  border: 2px solid white;
+  border-radius: 40px;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hero-button:hover {
+  background: white;
+  color: black;
+}
+
+/* Movie Cards */
+.movie-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 40px;
+  padding: 40px;
+  justify-items: center;
+  background-color: #1e1e1e;
+}
+
+.movie-card {
+  position: relative;
+  width: 300px;
+  height: 380px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.movie-card:hover {
+  transform: scale(1.03);
+}
+
+.movie-poster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.movie-overlay {
+  position: absolute;
+  bottom: 0;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent 60%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.movie-card:hover .movie-overlay {
+  opacity: 1;
+}
+
+.movie-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.find-out-btn {
+  padding: 10px 30px;
+  background-color: crimson;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.find-out-btn:hover {
+  background-color: darkred;
+}
+
+/* Search */
+
+.search-input {
+  padding: 15px 20px;  /* Increase padding for more height */
+  font-size: 18px;  /* Increase the font size */
+  width: 100%;  /* Ensure it stretches across its container */
+  max-width: 600px;  /* Optional: Set a maximum width if you don't want it too wide */
+  border-radius: 10px;  /* Optional: Slightly round the corners */
+  border: 1px solid #ccc;
+  margin-top: 20px;  /* Add some space at the top */
+}
+
+.search-form {
+  display: flex;
+  justify-content: center; 
+  gap: 10px;
+}
+
+
+/* Find out more */
+
+
+.movie-detail-container {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #111;
+  color: #fff;
+  min-height: 100vh;
+  align-items: flex-start;
+}
+
+.poster {
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+}
+
+.movie-info {
+  flex: 1;
+}
+
+.movie-info h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.meta {
+  color: #ccc;
+  margin-bottom: 1rem;
+}
+
+.movie-info h2 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.watch-button {
+  margin-top: 1.5rem;
+  background-color: #e50914;
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.watch-button:hover {
+  background-color: #bf0812;
+}
+
+/* movies */
+
+
+.movieForm {
+  display: flex;
+  border: none;
+  gap: 30px;
+  padding: 20px;
+
+  background-color: #1e1e1e;
+}
+.movie-container2{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 40px;
+  padding: 40px;
+  justify-items: center;
+  background-color: #1e1e1e;
+
+}
