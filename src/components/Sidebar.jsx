@@ -22,8 +22,9 @@ const Sidebar = () => {
     { label: 'Help', icon: <HelpRoundedIcon /> },
   ];
 
+  
   return (
-    <Box
+    <Box 
       sx={{
         position: 'fixed', // Ensures it sticks to the side even when scrolling
     top: 0,            // Keeps it at the top of the viewport

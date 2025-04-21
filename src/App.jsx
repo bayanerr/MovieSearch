@@ -7,10 +7,13 @@ import Sidebar from './components/Sidebar'
 import MovieCards from './components/MovieCards'
 import MovieDetail from './components/MovieDetail';
 import MoviesPage from './components/MoviesPage';
+
 function App() {
   return (
     <div style={{ display: 'flex' }}>
+      <div className='sidebar'>
       <Sidebar />
+      </div>
       <div className="main-content" style={{ marginLeft: 200 }}>
         <Routes>
           <Route path="/" element={<MovieCards />} />

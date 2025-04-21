@@ -247,3 +247,27 @@ html, body {
   background-color: #1e1e1e;
 
 }
+.sidebar {
+  display: block;
+}
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+  .movie-container,
+  .movie-container2 {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .movie-card {
+    width: 180px;
+    height: 280px;
+  }
+
+  
+  .main-content {
+    margin-left: 0 !important;
+  }
+}
