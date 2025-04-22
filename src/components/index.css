@@ -250,6 +250,53 @@ html, body {
 .sidebar {
   display: block;
 }
+
+.no-results-text{
+  color: white;
+  font-size: 2rem;
+  font-weight: 300;
+}
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px; /* enough space to center it nicely */
+}
+
+.dot-spinner {
+  width: 60px;
+  height: 60px;
+  position: relative;
+}
+
+.dot-spinner::before,
+.dot-spinner::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  animation: spin 1.2s linear infinite;
+}
+
+.dot-spinner::before {
+  border: 8px dotted red;
+  opacity: 0.7;
+}
+
+.dot-spinner::after {
+  border: 4px dotted red;
+  width: 40px;
+  height: 40px;
+  top: 10px;
+  left: 10px;
+  opacity: 0.5;
+  animation-direction: reverse;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
 @media (max-width: 768px) {
   .sidebar {
     display: none;
